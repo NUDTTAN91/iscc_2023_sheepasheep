@@ -1,0 +1,137 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3vh;
+  box-sizing: border-box;
+}
+
+/*** 按钮 ***/
+.btn {
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  margin-bottom: 10px;
+  background: #3498db;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 8px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #3cb0fd;
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.btn+.btn {
+  margin-left: 10px;
+}
+.btn2+.btn {
+  margin-left: 10px;
+}
+.btn:disabled {
+  display: inline-block;
+  margin-bottom: 10px;
+  background: #9da8af;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 8px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.wrap {
+  padding: 44px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/*** 卡片容器 ***/
+.container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  max-width: 500px;
+  /* 不兼容 */
+  /* aspect-ratio: 16/16; */
+}
+
+/*** 卡片 ***/
+.card-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 2px);
+  height:calc(100% - 2px);
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 10px;
+  background-color: #ccc;
+}
+.card span {
+  opacity: 0.5;
+  font-size: 24px;
+}
+.is-allow {
+  background-color: white;
+}
+.is-allow span {
+  opacity: 1;
+}
+/*** 卡片动画 ***/
+@keyframes scaleDraw {
+  0% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/*** 卡槽 ***/
+.card-slot {
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #ccc;
+  height: 40px;
+  width: 280px;
+  border-radius: 10px;
+}
