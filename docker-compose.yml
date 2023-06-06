@@ -4,7 +4,7 @@ services:
 
   web:
     build: .
-    image: iscc_2023_sheepasheep
+    image: nudttan91/iscc_2023_sheepasheep
     ports:
       - "80:80"
     environment:
