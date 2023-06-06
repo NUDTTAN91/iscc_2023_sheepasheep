@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+
+  web:
+    build: .
+    image: iscc_2023_sheepasheep
+    ports:
+      - "80:80"
+    environment:
+      - FLAG=flag{6fda1bc0-56bf-91e0-40b4-169929c5a8a2}
